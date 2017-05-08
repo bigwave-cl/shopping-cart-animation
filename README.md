@@ -1,5 +1,5 @@
 ### 项目详解：
-如果需要详细了解，[**请戳我**](http://www.jianshu.com/p/ee6cec83b92c),给个star我就把他买了。
+如果需要详细了解，[**请戳我**](http://www.jianshu.com/p/ee6cec83b92c),给个star我就把他卖了。
 
 ### 截图：
 <div style="text-align: center;width: 100%;">
