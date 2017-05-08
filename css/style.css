@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 375px;
+    height: 667px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.model {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 147px;
+    left: 0;
+}
+
+.model-set {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+}
+
+.model-set .btn-group {
+    float: left;
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.model-set .btn-group .text {
+    font-size: 18px;
+    font-weight: 600;
+    width: -webkit-calc(100% -20px);
+    width: calc(100% -20px);
+    padding-left: 20px;
+    text-align: left;
+    vertical-align: middle;
+    color: #474443;
+}
+
+.model-set .btn-group .text > span {
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.model-set .btn-group .text > input {
+    width: 80px;
+    margin: 0;
+    padding: 5px 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    outline: none;
+}
+
+.model-set .btn-group .set {
+    display: inline-block;
+    padding-top: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.model-set .btn-group .set > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.model-set .btn-group .set > button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    border: 2px solid #ffbc00;
+    border-radius: 3px;
+    outline: none;
+    background-color: #fff;
+}
+
+.model-set .btn-group .set > button.reduce:before,
+.model-set .btn-group .set > button.add:before,
+.model-set .btn-group .set > button.add:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 0;
+    content: '';
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-top: 3px solid #ffbc00;
+}
+
+.model-set .btn-group .set > button.add:after {
+    width: 0;
+    height: 18px;
+    border-top: unset;
+    border-left: 3px solid #ffbc00;
+}
+
+.parabola-test {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px #2d82ff;
+}
+
+.parabola-test.begin {
+    z-index: 2;
+    top: 1%;
+    left: 1%;
+    color: #1ca261;
+    border: 1px solid #1ca261;
+}
+
+.parabola-test.end {
+    z-index: 1;
+    top: 80%;
+    left: 85%;
+    color: #dd4e42;
+    border: 1px solid #dd4e42;
+}
+
+.parabola-animation {
+    width: 100%;
+}
+
+.parabola-box-hor {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    -webkit-animation: parabola-hor-animation 1s ease-out 1;
+    animation: parabola-hor-animation 1s ease-out 1;
+}
+
+.parabola-box-hor.top {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+
+.parabola-box-ver {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    -webkit-animation: parabola-ver-animation 1s ease-in 1;
+    animation: parabola-ver-animation 1s ease-in 1;
+    border-radius: 50%;
+}
+
+.parabola-box-ver.top {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+.parabola-box-ver > img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 415px) {
+    .wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}

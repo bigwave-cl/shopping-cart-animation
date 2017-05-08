@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>购物车动画</title>
+	<meta name="keywords" content="购物车动画">
+	<meta name="description" content="购物车动画">
+	<meta name="author" content="陈龙">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="model">
+			<div class="parabola-test begin">
+				开始位置
+			</div>
+			<div class="parabola-test end">
+				结束位置
+			</div>
+		</div>
+		<div class="model-set">
+			<div class="btn-group">
+				<div class="text">
+					开始位置设置：
+					<span>倍数：</span>
+					<input type="number" value='1' class="begin-multiple">
+				</div>
+				<div class="set" data-type="begin" data-axis="x">
+					<span>left:</span>
+					<button type="button" class="reduce"></button>
+					<button type="button" class="add"></button>
+				</div>
+				<div class="set" data-type="begin" data-axis="y">
+					<span>top:</span>
+					<button type="button" class="reduce"></button>
+					<button type="button" class="add"></button>
+				</div>
+			</div>
+			<div class="btn-group">
+				<div class="text">
+					结束位置设置：
+					<span>倍数：</span>
+					<input type="number" value='1' class="end-multiple">
+				</div>
+				<div class="set" data-type="end" data-axis="x">
+					<span>left:</span>
+					<button type="button" class="reduce"></button>
+					<button type="button" class="add"></button>
+				</div>
+				<div class="set" data-type="end" data-axis="y">
+					<span>top:</span>
+					<button type="button" class="reduce"></button>
+					<button type="button" class="add"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./js/addCar.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>
