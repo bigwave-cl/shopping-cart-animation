@@ -4,6 +4,8 @@
 ### 截图：
 <div style="text-align: center;width: 100%;">
     <div style="display: inline-block;text-align: center;">
-        <img src="./img/example.png" alt="示例" style="width: 100%;border:none !important;margin: 0 auto !important;">
+
+        ![效果图](http://upload-images.jianshu.io/upload_images/5316968-197dd603f733c26a.gif?imageMogr2/auto-orient/strip)
+        
     </div>
 </div>

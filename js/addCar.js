@@ -6,16 +6,16 @@ var addCar = function(opt) {
         parabola.prototype = {
             init: function(opt) {
                 var flyO = this.calculatedValue(opt),
-                    flyDom = this.creatHtml(flyO.site, flyO.img),
+                    flyDom = this.creatHtml(flyO.site, flyO.img ,flyO.callback),
                     flyRule = this.creatRule(flyO.coord);
 
                 document.getElementsByTagName('head')[0].appendChild(flyRule);
                 document.body.appendChild(flyDom);
-                $('.parabola-animation').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.parabola-box-ver', function() {
-                    var _pfly = $('.parabola-animation');
-                    if (_pfly.length) _pfly.remove();
-                    flyO.callback();
-                });
+                // $('.parabola-animation').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.parabola-box-ver', function() {
+                //     var _pfly = $('.parabola-animation');
+                //     if (_pfly.length) _pfly.remove();
+                //     flyO.callback();
+                // });
             },
             creatRule: function(coord) {
                 var cssAnimation = document.createElement('style');
@@ -81,7 +81,7 @@ var addCar = function(opt) {
                 cssAnimation.innerHTML = rules;
                 return cssAnimation;
             },
-            creatHtml: function(site, img) {
+            creatHtml: function(site, img ,callback) {
                 var imgHtml = img == '' ? '' : '<img src="' + img + '">';
 
                 var html = '<div class="parabola-box-hor">\
@@ -94,6 +94,11 @@ var addCar = function(opt) {
                 parentBox.innerHTML = html;
                 parentBox.setAttribute('class', 'parabola-animation');
 
+                $(parentBox).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.parabola-box-ver', function() {
+                    var _pfly = $(parentBox);
+                    if (_pfly.length) _pfly.remove();
+                    callback();
+                });
                 var frag = document.createDocumentFragment();
                 frag.appendChild(parentBox);
 
